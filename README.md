@@ -38,10 +38,6 @@ where, loss is one sample error; MSE is mean squared error, n is the amount of s
 
 
 
-
-
-
-
 ## 2. Linear Model
 
 $$
@@ -77,4 +73,19 @@ $$
 From the image, it can be concluded that when the value of w is 2.0, the loss function is minimized, therefore this point is the best parameter.
 
 
+
+### 2-2 Q: Try to use the model in (3), and draw the cost graph.
+
+**Tips:**
+
+- You can read the material of how to draw 3d graph.
+- Function **np.meshgrid()** is very popular for drawing 3d graph, read the docs and utilize vectorization calculation
+
+
+
+<img src="./imgs/2-2_2.png">
+
+
+
+## 3. Gradient Descent
 
