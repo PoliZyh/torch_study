@@ -1,7 +1,3 @@
----
-typora-root-url: ./imgs
----
-
 # Pytorch_study
 
 
@@ -76,7 +72,7 @@ $$
 
 **A: Enumerating Method! We can find that the best parameters are located within an interval. So, we can enumerate all possibilities and plot the loss function curve, with the lowest point being the best parameters.**
 
-![](/2-1_1.png)
+<img src="./imgs/2-1_1.png">
 
 From the image, it can be concluded that when the value of w is 2.0, the loss function is minimized, therefore this point is the best parameter.
 
