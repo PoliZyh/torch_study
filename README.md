@@ -34,7 +34,7 @@ $$
 \text{MSE} = \text{cost} = \frac{1}{n} \sum_{i=1}^{n} (\hat{y}_i - y_i)^2
 $$
 
-where, loss is one sample error; MSE is mean squared error, n is the amount of samples.
+Where, loss is one sample error; MSE is mean squared error, n is the amount of samples.
 
 
 
@@ -44,7 +44,7 @@ $$
 \hat{y} = x \cdot \omega + b
 $$
 
-where, the machine starts with a random guess.
+Where, the machine starts with a random guess.
 $$
 \omega = Random \  \ Value
 $$
@@ -82,10 +82,61 @@ From the image, it can be concluded that when the value of w is 2.0, the loss fu
 - Function **np.meshgrid()** is very popular for drawing 3d graph, read the docs and utilize vectorization calculation
 
 
-
+<div align="center">
 <img src="./imgs/2-2_2.png">
-
+</div>
 
 
 ## 3. Gradient Descent
+
+$$
+\text{Gradient}=\frac{\partial \cos t}{\partial w}
+$$
+
+Where,  cost is y-axis and w is x-axis.
+
+So, how to **update** ?
+$$
+w = w - \alpha \times \frac{\partial \cos t}{\partial w}
+$$
+Where, alpha is the learning rate and it should be set to a smaller value.
+$$
+\frac{\partial \text{cost}(\omega)}{\partial \omega} = \frac{\partial}{\partial \omega} \frac{1}{N} \sum_{n=1}^{N} (x_n \cdot \omega - y_n)^2
+
+= \frac{1}{N} \sum_{n=1}^{N} \frac{\partial}{\partial \omega} (x_n \cdot \omega - y_n)^2
+
+= \frac{1}{N} \sum_{n=1}^{N} 2 \cdot (x_n \cdot \omega - y_n) \frac{\partial (x_n \cdot \omega - y_n)}{\partial \omega}
+
+= \frac{1}{N} \sum_{n=1}^{N} 2 \cdot x_n \cdot (x_n \cdot \omega - y_n)
+$$
+
+### 3-1. Q: Try to use the gradient descent to find the MSE.
+<div align="center"><img src="./imgs/3-1_1.png"></div>
+
+### 3-2. Q: Try to use the stochastic gradient descent to find the MSE.
+
+What is **Stochastic Gradient Descent**?
+$$
+\text{Stochastic Gradient}=\frac{\partial loss}{\partial w}
+$$
+Where, loss is the loss value of a random sample.
+
+So, how to update?
+$$
+w = w - \alpha \times \frac{\partial loss}{\partial w}
+$$
+
+$$
+\frac{\partial  loss_n}{\partial \omega} = 2 \cdot x_n \cdot (x_n \cdot \omega - y_n)
+$$
+
+By using stochastic gradient descent, we can avoid getting stuck at saddle points.
+
+### 3-3. What is Batch and Mini-Batch?
+
+Group the dataset and calculate the gradient of each group for updating at each time step.
+<div align="center">
+<img src="./imgs/3-3_1.png">
+</div>
+
 
