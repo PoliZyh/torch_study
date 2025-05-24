@@ -18,7 +18,7 @@ def loss(x, y):
     return (y_pred - y) ** 2
 
 
-for epoch in range(100):
+for epoch in range(10000):
     for x, y in zip(x_data, y_data):
         l = loss(x, y)
         l.backward()
