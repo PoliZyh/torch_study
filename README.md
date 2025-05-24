@@ -140,3 +140,51 @@ Group the dataset and calculate the gradient of each group for updating at each 
 </div>
 
 
+## 4. Back Propagation
+
+A two layer neural network is
+$$
+\hat{y} = W_2(W_1 \cdot X + b_1) + b_2
+$$
+Where, W is the weight matrix and b is the bias.
+
+<div align="center">
+<img src="./imgs/4_1.png">
+</div>
+### 4-1. Q: Compute the gradient with Computational Graph.
+
+<div align="center">
+<img src="./imgs/4-1_1.png">
+</div>
+
+A:
+<div align="center">
+<img src="./imgs/4-1_2.jpg">
+</div>
+
+
+### 4-2. Q: Compute gradient of Affine model.
+<div align="center">
+<img src="./imgs/4-2_1.png">
+</div>
+A:
+<div align="center">
+<img src="./imgs/4-2_2.jpg">
+</div>
+
+### 4-3. What is Tensor?
+
+In PyTorch, Tensor is the important component in constructing dynamic computational graph.
+
+It contains data and grad, which storage the value of node and gradient w.r.t loss respectively.
+
+- **用 `.data`**：
+  - 需要修改张量的值（如更新模型权重 `weight.data -= lr * weight.grad`）。
+  - 需要访问张量的数据但不想影响梯度计算。
+- **用 `.item()`**：
+  - 需要将单元素张量转换为 Python 数值（如打印 loss、计算指标）。
+
+### 4-4. Q: Compute gradients using PyTorch.
+<div align="center">
+<img src="./imgs/4-4_1.png">
+</div>
