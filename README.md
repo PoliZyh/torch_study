@@ -190,3 +190,35 @@ It contains data and grad, which storage the value of node and gradient w.r.t lo
 </div>
 ## 5. Linear Regression with PyTorch
 
+## 6. Logistic Regression
+
+Although it is called "regression", it is used for classification tasks
+
+In classification, the output of model is the **probability** of input belongs to the exact class.
+
+How to map? R --> [0, 1]? **Use Logistic Function!**
+$$
+\sigma(x) = \frac{1}{1 + e^{-x}}
+$$
+<div align="center">
+<img src="./imgs/5_1.png">
+</div>
+
+<div align="center">
+<img src="./imgs/5_2.png">
+</div>
+
+<div align="center">
+<img src="./imgs/5_3.png">
+</div>
+
+The Loss Function is called BCE_Loss.
+
+<div align="center">
+<img src="./imgs/5_4.png">
+</div>
+
+Test the model...
+<div align="center">
+<img src="./imgs/5_5.png">
+</div>

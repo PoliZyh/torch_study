@@ -26,7 +26,7 @@ optimizer = torch.optim.SGD(model.parameters(), lr=0.01)
 for epoch in range(100):
     y_pred = model(x_data)
     loss = criterion(y_pred, y_data)
-    print("epoch =", epoch, "loss = ", loss)
+    print("epoch =", epoch, "loss = ", loss.item())
     # Before backward, remember set the grad to ZERO!!!
     optimizer.zero_grad()
     # Calculate the grad
