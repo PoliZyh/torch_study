@@ -217,8 +217,46 @@ The Loss Function is called BCE_Loss.
 <div align="center">
 <img src="./imgs/5_4.png">
 </div>
-
 Test the model...
+
+| x(hours) | y(pass/fail) |
+| -------- | ------------ |
+| 1        | 0(fail)      |
+| 2        | 0(fail)      |
+| 3        | 1(pass)      |
+| 4        | ?            |
+| ...      | ?...         |
+
+
+
 <div align="center">
 <img src="./imgs/5_5.png">
+</div>
+## 7. Multiple Dimension Input
+
+DataSet:
+<div align="center">
+<img src="./imgs/6_1.png">
+</div>
+
+<div align="center">
+<img src="./imgs/6_2.png">
+</div>
+
+notice! The first param of Linear is the dimension of input and the second param of Linear is the dimension of the output.
+
+<div align="center">
+<img src="./imgs/6_3.png">
+</div>
+
+The new model.
+
+<div align="center">
+<img src="./imgs/6_4.png">
+</div>
+
+Change the activate function.
+
+<div align="center">
+<img src="./imgs/6_5.png">
 </div>
