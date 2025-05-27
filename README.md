@@ -260,3 +260,11 @@ Change the activate function.
 <div align="center">
 <img src="./imgs/6_5.png">
 </div>
+
+## 8. Dataset and DataLoader
+
+### 8-1. Build a classifier using the DataLoader and Dataset 《titanic》.
+
+<div align="center">
+<img src="./imgs/8-1_1.png">
+</div>

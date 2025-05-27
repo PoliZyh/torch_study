@@ -3,12 +3,12 @@ import numpy as np
 
 xy = np.loadtxt('../dataset/diabetes.csv', delimiter=',', dtype=np.float32)
 # the first param is all lines, the second param is [begin, end) column
-x_data = torch.from_numpy(xy[:, :-1])
+# x_data = torch.from_numpy(xy[:, :-1])
 # the first param is all lines, the second param is the end column, the [] can
 # make sure that the column will be the matrix
-y_data = torch.from_numpy(xy[:, [-1]])
-# x_data = torch.tensor(xy[:, :-1], dtype=torch.float32)
-# y_data = torch.tensor(xy[:, [-1]], dtype=torch.float32)
+# y_data = torch.from_numpy(xy[:, [-1]])
+x_data = torch.tensor(xy[:, :-1], dtype=torch.float32)
+y_data = torch.tensor(xy[:, [-1]], dtype=torch.float32)
 
 
 class Model(torch.nn.Module):
