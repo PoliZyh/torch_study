@@ -268,3 +268,56 @@ Change the activate function.
 <div align="center">
 <img src="./imgs/8-1_1.png">
 </div>
+## 9. Softmax Classifier
+
+Output a Distribution of prediction with Softmax.
+
+<div align="center">
+<img src="./imgs/9_1.png">
+</div>
+
+The Softmax function:
+$$
+ P(y = i) = \frac{e^{z_i}}{\sum_{j=0}^{K-1} e^{z_j}}, \quad i \in \{0, \dots, K-1\} 
+$$
+
+<div align="center">
+<img src="./imgs/9_2.png">
+</div>
+
+Loss.
+<div align="center">
+<img src="./imgs/9_3.png">
+</div>
+CrossEntropyLoss.
+
+<div align="center">
+<img src="./imgs/9_4.png">
+</div>
+
+$$
+\text{CrossEntropyLoss} \Longleftrightarrow \text{LogSoftmax} + \text{NLLLoss}
+$$
+
+### 9-1. Implementation of classifier to MNIST dataset.
+<div align="center">
+<img src="./imgs/9-1_1.png">
+</div>
+Use transform to convert the PIL Image to Tensor. W * H * C --> C * W * H.
+
+The params of transform are **mean** and **std** respectively.
+
+<div align="center">
+<img src="./imgs/9-1_2.png">
+</div>
+The model is.
+
+<div align="center">
+<img src="./imgs/9-1_3.png">
+</div>
+
+<div align="center">
+<img src="./imgs/9-1_4.png">
+</div>
+### 9-2. Try to implement a classifier for Otto.
+
