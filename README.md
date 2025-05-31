@@ -321,3 +321,7 @@ The model is.
 </div>
 ### 9-2. Try to implement a classifier for Otto.
 
+## 10. Basic CNN
+<div align="center">
+<img src="./imgs/10_1.png">
+</div>

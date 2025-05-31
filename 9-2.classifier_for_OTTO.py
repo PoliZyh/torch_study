@@ -109,7 +109,7 @@ def test():
 
 if __name__ == '__main__':
 
-    for epoch in range(20):  # 训练10个epoch
+    for epoch in range(20):
         train(epoch)
 
         # 测试模型并生成预测
