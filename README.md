@@ -325,3 +325,126 @@ The model is.
 <div align="center">
 <img src="./imgs/10_1.png">
 </div>
+Single Input Channel.
+<div align="center">
+<img src="./imgs/10_2.png">
+</div>
+
+3 Input Channels.
+<div align="center">
+<img src="./imgs/10_3.png">
+</div>
+
+What is the Convolution?
+<div align="center">
+<img src="./imgs/10_4.png">
+</div>
+
+<div align="center">
+<img src="./imgs/10_5.png">
+</div>
+
+N input Channels and M output Channels.
+
+<div align="center">
+<img src="./imgs/10_6.png">
+</div>
+
+
+<div align="center">
+<img src="./imgs/10_7.png">
+</div>
+
+<div align="center">
+<img src="./imgs/10_8.png">
+</div>
+
+torch.Size([1, 5, 100, 100]).    [batch, channel, height, width]
+torch.Size([1, 10, 98, 98]).  [batch, channel, height, width]
+torch.Size([10, 5, 3, 3]).   [output_channel, input_channel, kernel_height, kernel_width]
+
+### 10-1. Padding
+<div align="center">
+<img src="./imgs/10-1_1.png">
+</div>
+### 10-2. Stride
+<div align="center">
+<img src="./imgs/10-2_1.png">
+</div>
+### 10-3. Max Pooling Layer
+<div align="center">
+<img src="./imgs/10-3_1.png">
+</div>
+### 10-4. A Simple Convolutional Neural Network
+<div align="center">
+<img src="./imgs/10-4_1.png">
+</div>
+
+<div align="center">
+<img src="./imgs/10-4_2.png">
+</div>
+
+<div align="center">
+<img src="./imgs/10-4_3.png">
+</div>
+
+[10,   300] loss: 0.038
+[10,   600] loss: 0.036
+[10,   900] loss: 0.039
+Accuracy on test: 98.720 %
+
+## 11. Advanced CNN
+
+### 11-1. GoogLe Net
+
+Inception Module
+<div align="center">
+<img src="./imgs/11-1_1.png">
+</div>
+Concatenate, make sure that **only C** can be different. [B, C, W, H]
+
+What is 1✖️1 convolution?
+<div align="center">
+<img src="./imgs/11-1_2.png">
+</div>
+
+Why is  1✖️1 convolution?
+<div align="center">
+<img src="./imgs/11-1_3.png">
+</div>
+
+<div align="center">
+<img src="./imgs/11-1_4.png">
+</div>
+
+<div align="center">
+<img src="./imgs/11-1_5.png">
+</div>
+
+<div align="center">
+<img src="./imgs/11-1_6.png">
+</div>
+
+<div align="center">
+<img src="./imgs/11-1_7.png">
+</div>
+
+How to get 1408? Delete the three rows which is marked and get the error informations.
+
+
+
+### 11-2. Residual Net
+
+<div align="center">
+<img src="./imgs/11-2_1.png">
+</div>
+**prevent gradient vanishing**
+Residual Block.
+
+<div align="center">
+<img src="./imgs/11-2_2.png">
+</div>
+
+<div align="center">
+<img src="./imgs/11-2_3.png">
+</div>
